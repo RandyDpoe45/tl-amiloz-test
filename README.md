@@ -7,7 +7,7 @@ This project was developed using java 19 and springboot as the backend framework
 To run this project you must follow this steps:
 * Clone the repository `git clone `
 * Then you can use the docker compose file to run everything `docker compose up --build` or `docker compose up --build -d` if you want to run the project in detached mode. 
-Beware the first time you run the command it may take a little while as it must download the images and build the server image. 
+Beware the first time you run the command it may take a little while, as it must download the images and build the server image. 
 * Then you can start using the Rest API provided by the project, that will be explained in the following sections of this document.
 
 
