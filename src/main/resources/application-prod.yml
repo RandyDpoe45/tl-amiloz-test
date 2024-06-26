@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://amiloz_db:5432/aniloz_db
+    username: randy
+    password: HolaAmigo12+
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: postgresql
+
+startup-config:
+  admin-user-config:
+    username: aniloz-admin
+    password: Hola123456
+
+security-server-config:
+  bcrypt-strength: 12
+  random-seed: BOaTUWP1U3qYuliOGI2AtlDsk8Nn6NvzxIN6migxmF0AcPfdeVUtoLXLr5WqjGcy
+  jwt:
+    issuer-uri: http://localhost:8080/auth-service/auth
+    access-token-live-time-sec: 1800
+    refresh-token-live-time-sec: 1820
+  access-token:
+    public-key-path: ./rsa-keys-folder/access-public.key
+    private-key-path: ./rsa-keys-folder/access-private.key
+  refresh-token:
+    public-key-path: ./rsa-keys-folder/refresh-public.key
+    private-key-path: ./rsa-keys-folder/refresh-private.key
+  default-creation-key-directory: ./rsa-keys-folder
+  rsa-key-size: 2048
+

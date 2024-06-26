@@ -1,0 +1,23 @@
+version: '3.9'
+
+services:
+  amiloz_db:
+    container_name: amiloz_db
+    image: postgres:16-alpine
+    ports:
+      - "8089:5432"
+    volumes:
+      - ~/apps/postgres:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=HolaAmigo12+
+      - POSTGRES_USER=randy
+      - POSTGRES_DB=amiloz_db
+
+  amiloz_server:
+    depends_on:
+      - amiloz_db
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8090:8090"

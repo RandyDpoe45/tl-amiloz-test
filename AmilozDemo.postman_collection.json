@@ -1,0 +1,408 @@
+{
+	"info": {
+		"_postman_id": "36a1bb51-4248-47a4-bdbc-369b9e544edf",
+		"name": "AmilozDemo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9539608",
+		"_collection_link": "https://lively-water-578564.postman.co/workspace/My-Workspace~92e5e77b-7b73-49dc-88cc-9defcca7af26/collection/9539608-36a1bb51-4248-47a4-bdbc-369b9e544edf?action=share&source=collection_link&creator=9539608"
+	},
+	"item": [
+		{
+			"name": "Crear cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\" : \"RandyD45\",\n    \"password\" : \"Hola456789\",\n    \"name\" : \"Randy\",\n    \"lastname\": \"Darrell\",\n    \"email\" : \"randy@email.com\",\n    \"documentId\" : \"789456123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/usuarios",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Log in",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"RandyD45\",\n    \"password\": \"Hola456789\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear administrador",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJhbmlsb3otYWRtaW4iLCJwZXJtaXNzaW9ucyI6WyJBTUlMT1otQURNSU4iXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2F1dGgtc2VydmljZS9hdXRoIiwiaWQiOjEsImV4cCI6MTcxOTM3NjA2OSwiaWF0IjoxNzE5Mzc0MjY5fQ.tAgBg4ddsIDBivBI4E-4QoPerlf8nBZXMyVg_aMYIlUXJoDDL0c4XR-SaZ5JrD53_GSY9D_wysSyHTrgY0EgB4xrxpmhKgVsWaQ_mrlKTm1Pcf5ad5RmZ1-1_mAxCpxYMe3WWB8b-_WVIO6im9rABoqAsAq1YPHTYxMoINoQdyvHyeGrwoUG9j9gnHSkagxzbD-lBgUFT4DSms79EFnZQiRrkhLGeb2glvF951GHMLCRjCKQzK9KGAQUIXFhQHYZ31my0aX-hRx2rsYeiLCDtb1YOwPJYOzP0E3A2hDD50BTlP9m_LygCFlPcSTyitqjOjYRO5Fn-cArYSp-lp-P8Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\" : \"RandyD46\",\n    \"password\" : \"Hola456789\",\n    \"name\" : \"Randy\",\n    \"lastname\": \"Darrell\",\n    \"email\" : \"randyd@email.com\",\n    \"documentId\" : \"456123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/usuarios/admin",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"usuarios",
+						"admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "log in admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"aniloz-admin\",\n    \"password\" : \"Hola123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear oferta de prestamo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJhbmlsb3otYWRtaW4iLCJwZXJtaXNzaW9ucyI6WyJBTUlMT1otQURNSU4iXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2F1dGgtc2VydmljZS9hdXRoIiwiaWQiOjEsImV4cCI6MTcxOTM4MTA0MywiaWF0IjoxNzE5Mzc5MjQzfQ.UYlXP6UuD0XdaTEQi-AUvOfRlxdpt4GhVsazXjNI43UHeFB-wBTVVaVXKb8wKUecikL_MJFWRmY5uZ5K0uac0pf9e1yTC80f0LjtjRfpjcz8LUGqNhyo7SpNnHlCpBjbh0f8r-hJ-q_duGqO4_X1jN13MxRDHOOzKt6-xcMErHn0hcJyWQMGWbvLUsy9IjNeKUf6L-WgPmz4I8NidFv3gK2wqJZnWBTRyJivfcdbvUPy41V7TwH382y6G3n8ef-DQRMR4bATND1rtK_4AR6BsluXWZPVfBDBWMIcJ5mAym8aDjyXf8OmaDnGQyRpg-ivO3VaCKSI3Z4Er5ECTIpVHw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"offerCreatorId\" : 1,\n    \"totalAmount\" : 20000,\n    \"totalInstallments\" : 12,\n    \"interestRate\" : 0.10,\n    \"paymentTypeCode\": \"WEEKLY\",\n    \"interestTypeCode\": \"SIMPLE\",\n    \"interestTimeSpanCode\" : \"YEARLY\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/usuarios/2/ofertas",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"usuarios",
+						"2",
+						"ofertas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar ofertas de cliente",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJSYW5keUQ0NSIsInBlcm1pc3Npb25zIjpbIkNMSUVOVCJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvYXV0aC1zZXJ2aWNlL2F1dGgiLCJpZCI6MiwiZXhwIjoxNzE5MzgxMDI4LCJpYXQiOjE3MTkzNzkyMjh9.VkZ4g3lrgk4i3ZitVE0Zj2Bz14nM11prYGgCFdyvOCELHZS-1958Ps10FEbPXu81NE0kvXzXQKo_Ug7rX2k0I0gWRblXAYKaeNgTm7QtClee99NGjo0PJNltaxiOoe8s0JlssiEBkYnSpBw735DotZK8nCBTyjFpXnSSLrPqfgPPNlSoY4RdkbvAfAuljTFiTeFE9X1ubgf-vFTWVd-TkRVXV3ut3z-RithS4OjGbHqgPTaU9vUtjN2TPmlKjXQ7mZIGKCNYFcxl_ejB0u6rsAqWo17ShDIOGrcEwpFuQ6sZmbcIoMwJLFTPqD3CO59Yq2ZfwuxIE9JQ-T1davC1-Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/usuarios/2/ofertas",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"usuarios",
+						"2",
+						"ofertas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crear prestamo desde oferta",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJSYW5keUQ0NSIsInBlcm1pc3Npb25zIjpbIkNMSUVOVCJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvYXV0aC1zZXJ2aWNlL2F1dGgiLCJpZCI6MiwiZXhwIjoxNzE5MzgxMDI4LCJpYXQiOjE3MTkzNzkyMjh9.VkZ4g3lrgk4i3ZitVE0Zj2Bz14nM11prYGgCFdyvOCELHZS-1958Ps10FEbPXu81NE0kvXzXQKo_Ug7rX2k0I0gWRblXAYKaeNgTm7QtClee99NGjo0PJNltaxiOoe8s0JlssiEBkYnSpBw735DotZK8nCBTyjFpXnSSLrPqfgPPNlSoY4RdkbvAfAuljTFiTeFE9X1ubgf-vFTWVd-TkRVXV3ut3z-RithS4OjGbHqgPTaU9vUtjN2TPmlKjXQ7mZIGKCNYFcxl_ejB0u6rsAqWo17ShDIOGrcEwpFuQ6sZmbcIoMwJLFTPqD3CO59Yq2ZfwuxIE9JQ-T1davC1-Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/usuarios/prestamo/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"usuarios",
+						"prestamo",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calendario de pagos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJSYW5keUQ0NSIsInBlcm1pc3Npb25zIjpbIkNMSUVOVCJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvYXV0aC1zZXJ2aWNlL2F1dGgiLCJpZCI6MiwiZXhwIjoxNzE5MzgxMDI4LCJpYXQiOjE3MTkzNzkyMjh9.VkZ4g3lrgk4i3ZitVE0Zj2Bz14nM11prYGgCFdyvOCELHZS-1958Ps10FEbPXu81NE0kvXzXQKo_Ug7rX2k0I0gWRblXAYKaeNgTm7QtClee99NGjo0PJNltaxiOoe8s0JlssiEBkYnSpBw735DotZK8nCBTyjFpXnSSLrPqfgPPNlSoY4RdkbvAfAuljTFiTeFE9X1ubgf-vFTWVd-TkRVXV3ut3z-RithS4OjGbHqgPTaU9vUtjN2TPmlKjXQ7mZIGKCNYFcxl_ejB0u6rsAqWo17ShDIOGrcEwpFuQ6sZmbcIoMwJLFTPqD3CO59Yq2ZfwuxIE9JQ-T1davC1-Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/usuarios/prestamo/1/cuotas",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"usuarios",
+						"prestamo",
+						"1",
+						"cuotas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar prestamos del cliente",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvYXV0aC1zZXJ2aWNlL2F1dGgiLCJzdWIiOiJSYW5keUQ0NSIsImlkIjoyLCJleHAiOjE3MTkzNjYyMjksImlhdCI6MTcxOTM2NDQyOSwicGVybWlzc2lvbnMiOlsiQ0xJRU5UIl19.TPpROmuXatTJYnHv12fHKoI7mi1QGXT_1u9Nc4jadXZyUIls02qMLBSvUQbYYh0SPPPSmunHOsLQWPTyV_RV4SfZbe2zPVldXViXb4mNyMZHSZkMbN6Gvl5gjoH4o_KNwTqV4Z3TDiM0aKXBWjgv9ZXlY2Xfjc-WvuFsdvcne0dc4eEl6w9O3QhuMbcoe3zfB8aWTzIm9BbLm3o4gxWTmypjwVtfPhGfkSW0ZfZxAgZZIXsvauYBCH6LRgDcKVXyfhZBgQeNMy5k66mYsySduBcSw-QMfUoQqR5slGYec9K3AU_SSxOWcFFCW9SsvQVQqFxTIutjRzn1_b6vecWeYg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/usuarios/2/prestamo",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"usuarios",
+						"2",
+						"prestamo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crear pago",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJSYW5keUQ0NSIsInBlcm1pc3Npb25zIjpbIkNMSUVOVCJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvYXV0aC1zZXJ2aWNlL2F1dGgiLCJpZCI6MiwiZXhwIjoxNzE5MzgxMDI4LCJpYXQiOjE3MTkzNzkyMjh9.VkZ4g3lrgk4i3ZitVE0Zj2Bz14nM11prYGgCFdyvOCELHZS-1958Ps10FEbPXu81NE0kvXzXQKo_Ug7rX2k0I0gWRblXAYKaeNgTm7QtClee99NGjo0PJNltaxiOoe8s0JlssiEBkYnSpBw735DotZK8nCBTyjFpXnSSLrPqfgPPNlSoY4RdkbvAfAuljTFiTeFE9X1ubgf-vFTWVd-TkRVXV3ut3z-RithS4OjGbHqgPTaU9vUtjN2TPmlKjXQ7mZIGKCNYFcxl_ejB0u6rsAqWo17ShDIOGrcEwpFuQ6sZmbcIoMwJLFTPqD3CO59Yq2ZfwuxIE9JQ-T1davC1-Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"loanInstallmentId\" : 1,\n    \"amount\" : 1000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/prestamos/pagos",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"prestamos",
+						"pagos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refrescar jwt token",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJSYW5keUQ0NSIsInBlcm1pc3Npb25zIjpbIkNMSUVOVCJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvYXV0aC1zZXJ2aWNlL2F1dGgiLCJpZCI6MiwiZXhwIjoxNzE5Mzc3NDUwLCJpYXQiOjE3MTkzNzU2NTB9.dL_RjOu7pIxzzJ71hH2V5_vUdf-mK29eYekestm3RWeg57ah42SzR3tOazx8atZi9mb9vm5vpi9ZTfzwsQQBrRK2wUMX-R4QhDdDr51eIg5s3WQemEKAcyp5t_AKjg8eqTI3kHEhO0Q0peWM4TW9PI7qDMaGW_37BM8afmIvTMKzIKfq1gjIdGWc4O4X2X8bvoRBgpfbqo19ZglJA3Vax0L4OlxCKUWYqOLZNTVPBBS0lO632G4FHjVwkMyPGM_n272JseLMje109mV6q469Qs8ShPubm1lPu9TkdjMvwNmqCmfwIN4Gh7351qU0dyN0__0vSIVk5fWth4N15GrGCQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"refreshToken\": \"eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvYXV0aC1zZXJ2aWNlL2F1dGgiLCJzdWIiOiJSYW5keUQ0NSIsImlkIjoyLCJleHAiOjE3MTkzNzc0NzAsImlhdCI6MTcxOTM3NTY1MH0.MUMNr6c8dJ0pj3iaOGUDuN913Z2lmdkjC6dacM9RJH27unjl8fEjqJv1JYzVGWcuPQM9e1kVRsXvoOdaj6wQBlb2zblFy-8VG_e1hhDeI4_JMkJ04teXs26Ib2BrY-_vsNv0z40LXL4rdaG9XZMj1s1KD1NWZTmIPsCwzHWdgpiUGZg6CsUnyChy_ONE1yuQv2FEqsqabtxtBDHsKCQbPdCOylYaTDS8p0I-u3kdQXGZsK03YomanCWonkRVubNigBAWBiHXCGMld_pBkB0aTLoYARTUFJvVe6419xwg96Uiz5Un3IrFPTcbvbrGRNaZV0d_nwhMFqhKt3OaCUdIUA\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/auth/refresh",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"auth",
+						"refresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reversar pago",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJSYW5keUQ0NSIsInBlcm1pc3Npb25zIjpbIkNMSUVOVCJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvYXV0aC1zZXJ2aWNlL2F1dGgiLCJpZCI6MiwiZXhwIjoxNzE5MzgyODMxLCJpYXQiOjE3MTkzODEwMzF9.simKP90sLWjqBy_33pRipClEqIIqxeCF1iIFDW-Q7xZuPUCGIB4Ps9rUJXInXap3GwZQ85zxtRqTCTqT-ne83ClK6bUZ0Rn5XFrMAUWTovrYYVKftt78NXFzeB-JNkwYnf-Gs-3FSLQpUhjoGVYUW6-TcxMyBjYcytXiVMUGFIPvz_mLbTjV-xFgeTZcd9NS8z7TYXKXn5AWGJhcO7r6SNOgK9znfVUSFUvjvxBJEsZkE9KJCo0lnOM4T83gebNG136a_KIbQql8mJICwLitotyvi45Dgp-7w5B3op57Y3bDAKfiaVy3tqyie968Ro-6OfqkED_bS7yf9wwTEsNGvA",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: aniloz-demo
+  profiles:
+    include: prod
+
+server:
+  port: 8090
