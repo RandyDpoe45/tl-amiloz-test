@@ -15,9 +15,11 @@ Beware the first time you run the command it may take a little while, as it must
 # Entity Design
 <img src="/media/design-aniloz.drawio.png" style="display:block;float:none;margin-left:auto;margin-right:auto;width:80%">
 
-This entity model was designed with two main things on mind:
+This entity model was designed with these things in mind:
 * Separate the business core data from the authentication data, so in the event it was necessary, an authentication server could be easily created.
 * Make as easily as possible the traceability of the loan process and have all the relevant data stored in the database.
+* Make the loan editable after it was created in case it is necesary, for exaple if a client requires a loan refinance.
+* Having an easy to query and easy to extend model for data analythics  
 
 # API description 
 you can try all the endpoints described in this section with the attached postman collection: [AmilozDemo.postman_collection.json](AmilozDemo.postman_collection.json)
