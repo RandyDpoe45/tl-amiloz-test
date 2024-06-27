@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://amiloz_db:5432/aniloz_db
+    url: jdbc:postgresql://amiloz_db:5432/amiloz_db
     username: randy
     password: HolaAmigo12+
 
