@@ -367,22 +367,35 @@
 		{
 			"name": "Reversar pago",
 			"request": {
-				"method": "GET",
-				"header": []
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJSYW5keUQ0NSIsInBlcm1pc3Npb25zIjpbIkNMSUVOVCJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvYXV0aC1zZXJ2aWNlL2F1dGgiLCJpZCI6MiwiZXhwIjoxNzE5MzgzMzE3LCJpYXQiOjE3MTkzODE1MTd9.DQXJYGMBLxb-Nx4ZGc4vTgLqBf1tecnBtbA-YfNN7QXwNP5Zi9ZgHL3bCfUsNuwlXEZvtMYVSKr655AWtZBWnY-O_Pf6U9IO-RF2MJiRArFWFYuI1SMrKEnErvmUlIskW4Oh5RtK75zN11VaMtMEDbVGUCygJ81N3WmHKIrLaFaX3LCUewF8G5PwZXPknuzJEcW0iEZboAljcqKNg5-JOr5Cw1G8XPlXha9uyfpWFch8u3obDvdrjsZITXMRL8tRzU_eIL573QrLQnN166t3BU8p2touCMDfBZT2NwKTZZdyp92mz8Jkj-W9OeYjjXZgM7MA0EWEpACitFstzNr-Aw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/prestamos/pagos/2/revertir",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"prestamos",
+						"pagos",
+						"2",
+						"revertir"
+					]
+				}
 			},
 			"response": []
 		}
 	],
-	"auth": {
-		"type": "bearer",
-		"bearer": [
-			{
-				"key": "token",
-				"value": "eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJSYW5keUQ0NSIsInBlcm1pc3Npb25zIjpbIkNMSUVOVCJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvYXV0aC1zZXJ2aWNlL2F1dGgiLCJpZCI6MiwiZXhwIjoxNzE5MzgyODMxLCJpYXQiOjE3MTkzODEwMzF9.simKP90sLWjqBy_33pRipClEqIIqxeCF1iIFDW-Q7xZuPUCGIB4Ps9rUJXInXap3GwZQ85zxtRqTCTqT-ne83ClK6bUZ0Rn5XFrMAUWTovrYYVKftt78NXFzeB-JNkwYnf-Gs-3FSLQpUhjoGVYUW6-TcxMyBjYcytXiVMUGFIPvz_mLbTjV-xFgeTZcd9NS8z7TYXKXn5AWGJhcO7r6SNOgK9znfVUSFUvjvxBJEsZkE9KJCo0lnOM4T83gebNG136a_KIbQql8mJICwLitotyvi45Dgp-7w5B3op57Y3bDAKfiaVy3tqyie968Ro-6OfqkED_bS7yf9wwTEsNGvA",
-				"type": "string"
-			}
-		]
-	},
 	"event": [
 		{
 			"listen": "prerequest",
