@@ -5,9 +5,9 @@ This project was developed using java 19 and springboot as the backend framework
 
 ## Use project
 To run this project you must follow this steps:
-* Clone the repository `git clone `
+* Clone the repository `git clone https://github.com/RandyDpoe45/tl-amiloz-test.git`
 * Then you can use the docker compose file to run everything `docker compose up --build` or `docker compose up --build -d` if you want to run the project in detached mode. 
-Beware the first time you run the command it may take a little while as it must download the images and build the server image. 
+Beware the first time you run the command it may take a little while, as it must download the images and build the server image. 
 * Then you can start using the Rest API provided by the project, that will be explained in the following sections of this document.
 
 
@@ -15,9 +15,11 @@ Beware the first time you run the command it may take a little while as it must 
 # Entity Design
 <img src="/media/design-aniloz.drawio.png" style="display:block;float:none;margin-left:auto;margin-right:auto;width:80%">
 
-This entity model was designed with two main things on mind:
+This entity model was designed with these things in mind:
 * Separate the business core data from the authentication data, so in the event it was necessary, an authentication server could be easily created.
 * Make as easily as possible the traceability of the loan process and have all the relevant data stored in the database.
+* Make the loan editable after it was created in case it is necesary, for exaple if a client requires a loan refinance.
+* Having an easy to query and easy to extend model for data analythics  
 
 # API description 
 you can try all the endpoints described in this section with the attached postman collection: [AmilozDemo.postman_collection.json](AmilozDemo.postman_collection.json)
